@@ -16,7 +16,7 @@ int main()
         for (int j=1; j<=k; j++) {
             if(dp[i][j]) {
                 dp[i+1][j] = max(dp[i][j],dp[i+1][j]);
-                dp[i+1][j+w] = max(dp[i][j+w],dp[i][j]+v);
+                dp[i+1][j+w] = max(dp[i+1][j+w],dp[i][j]+v);
             }
         }
     }
