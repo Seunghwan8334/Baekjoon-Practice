@@ -16,11 +16,9 @@ int main()
         for (int j=1; j<=k; j++) {
             if(dp[i][j]) {
                 dp[i+1][j] = max(dp[i][j],dp[i+1][j]);
-                dp[i+1][j+w] = max(dp[i][j]+v,dp[i+1][j+w]);
+                dp[i+1][j+w] = max(dp[i][j+w],dp[i][j]+v);
             }
         }
     }
-    int ans = 0;
-    for (int i=1; i<=k; i++) ans = max(dp[n][i],ans);
-    printf("%d",ans);
+    printf("%d",*max_element(dp[n]+1,dp[n]+k+1));
 }
