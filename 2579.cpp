@@ -12,7 +12,6 @@ int main()
     scanf("%d",&n);
     for (int i=1; i<=n; i++) scanf("%d",&a[i]);
 
-
     for (int i=1; i<=n; i++) {
         dp[0][i] = max(dp[1][i-1],dp[2][i-1]);
         dp[1][i] = dp[0][i-1]+a[i];
