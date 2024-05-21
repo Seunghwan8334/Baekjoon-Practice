@@ -20,8 +20,9 @@ pair <int,int> mzsum(int p,int q,int begin, int end, int cd, int cl) {
 
 int main() 
 {
-    cin.tie(NULL); // std::cin과 std::cout의 묶임을 해제
-    ios_base::sync_with_stdio(false); // C 표준 입출력과의 동기화를 비활성화
+    cin.tie(NULL); 
+    cout.tie(NULL);
+    ios_base::sync_with_stdio(false); 
     int n,k;
     while (cin >> n >> k){
         int tl=1;
