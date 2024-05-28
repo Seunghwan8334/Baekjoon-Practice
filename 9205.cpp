@@ -5,14 +5,9 @@
 
 using namespace std;
 
-struct s {
-    int y;
-    int x;
-};
-
 vector <int> v[104];
 queue <int> q;
-s p[104];
+pair<int,int> p[104];
 int chk[104];
 
 int main() 
@@ -22,10 +17,10 @@ int main()
     while(t--) {
         int n;
         scanf("%d",&n);
-        for (int i=1; i<=n+2; i++) scanf("%d %d",&p[i].y,&p[i].x);
+        for (int i=1; i<=n+2; i++) scanf("%d %d",&p[i].first,&p[i].second);
         for (int i=1; i<=n+2; i++) {
             for (int j=i+1; j<=n+2; j++) {
-                if (abs(p[i].y-p[j].y)+abs(p[i].x-p[j].x) <= 1000) {
+                if (abs(p[i].first-p[j].first)+abs(p[i].second-p[j].second) <= 1000) {
                     v[i].push_back(j);
                     v[j].push_back(i);
                 }
