@@ -21,7 +21,6 @@ pair <int,int> mzsum(int p,int q,int begin, int end, int cd, int cl) {
 int main() 
 {
     cin.tie(NULL); 
-    cout.tie(NULL);
     ios_base::sync_with_stdio(false); 
     int n,k;
     while (cin >> n >> k){
