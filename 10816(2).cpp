@@ -13,7 +13,6 @@ int main()
         if (M.find(tmp) == M.end()) M.insert({tmp,1});
         else M[tmp]++;
     }
-
     int m;
     scanf("%d",&m);
     while(m--) {
