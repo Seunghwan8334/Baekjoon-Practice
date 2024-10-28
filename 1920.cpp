@@ -1,8 +1,6 @@
 #include <iostream>
 #include <algorithm>
 
-using namespace std;
-
 int main() 
 {
     int n;
@@ -11,17 +9,15 @@ int main()
     int arr[100002];
     for (int i=0; i<n; i++) scanf("%d",&arr[i]);
     
-    sort(arr,arr+n); 
+    std::sort(arr,arr+n); 
     
-    int m;
+    int m,num;
     scanf("%d",&m);
-
+    
     for (int i=0; i<m; i++) {
-        int num;
         scanf("%d",&num);
 
-        int l = 0;
-        int r = n-1;
+        int l=0,r=n-1;
         while(l < r) {
             int mid = (l+r)/2;
             if (arr[mid] < num) l = mid+1;
