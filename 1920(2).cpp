@@ -1,9 +1,7 @@
 #include <iostream>
 #include <set>
 
-using namespace std;
-
-set <int> s;
+std::set <int> s;
 
 int main() 
 {   
