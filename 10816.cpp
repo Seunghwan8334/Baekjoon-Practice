@@ -1,30 +1,21 @@
 #include <iostream>
-#include <map>
+#include <algorithm>
 
-using namespace std;
-
-map <int,int> M;
+int n,arr[500002];
 
 int main() 
 {
-    cin.tie(NULL);
-    ios::sync_with_stdio(false);
+    scanf("%d",&n);
+    for (int i=0; i<n; i++) scanf("%d",&arr[i]);
 
-    int n;
-    cin >> n;
-    while(n--) {
-        int tmp;
-        cin >> tmp;
-        if (M.find(tmp) == M.end()) M.insert({tmp,1});
-        else M[tmp]++;
-    }
+    std::sort(arr,arr+n);
 
-    int m;
-    cin >> m;
+    int m,num;
+    scanf("%d",&m);
     while(m--) {
-        int tmp;
-        cin >> tmp;
-        if (M.find(tmp) == M.end()) cout << "0 ";
-        else cout << M[tmp] << " ";
+        scanf("%d",&num);
+        int L = std::lower_bound(arr,arr+n,num)-arr;
+        int R = std::upper_bound(arr,arr+n,num)-arr;
+        printf("%d ",R-L);
     }
 }
